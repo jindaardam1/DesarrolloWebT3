@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<form>
+Selecciona tu color favorito:
+<select id="myList" onchange="myFunction()">
+  <option></option>
+  <option>Rojo</option>
+  <option>Verde</option>
+  <option>Amarillo</option>
+  <option>Azul</option>
+  <option>Naranja</option>
+</select>
+<p>Tu color favorito es: <input type="text" id="demo" size="20"></p>
+</form>
+
+
+<script>
+  function myFunction() {
+    const listaColores = document.getElementById("myList");
+
+    document.getElementById("demo").value = listaColores.value;
+  }
+</script>
+
+
+
+</body>
+</html>

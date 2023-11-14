@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="image" src="noDisponible.png" width="250" height="250">
+    <form>
+        <input type="radio" name="caja">Abierta</input>
+        <input type="radio" name="caja">Cerrada</input>
+    </form>
+
+    <script>
+        const inputs = document.getElementsByName('caja');
+
+        inputs.item(0).addEventListener('click', establecerImagenAbierta);
+        function establecerImagenAbierta() {
+            document.getElementById("image").src = "cajaAbierta.jpg";
+        }
+
+        inputs.item(1).addEventListener('click', establecerImagenCerrada);
+        function establecerImagenCerrada() {
+            document.getElementById("image").src = "cajaCerrada.jpg";
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>	
+	<h2>Plazas MIR 2023</h2>	
+	<form id="frm1" >
+  		Provincia: <input type="text" ><br>
+  		Hospital:  <input type="text" ><br><br>	
+  		Especialidad: <select id="mySelect">
+  						<option>Selecciona especialidad</option>
+  						<option>Alergología</option>
+  						<option>Análisis clínicos</option>
+  						<option>Anatomía patológica</option>
+  						<option>Anestesiología</option>
+					</select>
+	</form> 
+
+<p>Click "Pulsar" para mostrar el valor de todos los elementos del formulario.</p>
+
+<button onclick="myFunction()">Pulsar</button>
+
+<p id="demo"></p>
+
+<script>
+	function myFunction() {
+		const inputs = document.getElementsByTagName("input");
+
+		const output = document.getElementById("demo");
+
+		for (let i = 0; i < inputs.length; i++) {
+			output.innerHTML += inputs.item(i).value + "</br>";
+    	}
+
+		output.innerHTML += document.getElementById("mySelect").value;
+	}
+	
+
+	
+</script>
+
+
+</body>
+</html>
