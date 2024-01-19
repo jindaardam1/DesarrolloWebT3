@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>DELETREOS DE ARMONÍA (Antonio Machado)</h2>
+    <p>Deletreos de armonía</p>
+    <p>que ensaya inexperta mano.</p>
+    <p>Hastío. Cacofonía</p>
+    <p class="uno">del sempiterno piano</p>
+    <p>que yo de niño escuchaba</p>
+    <p class="uno">soñando... no sé con qué,</p>
+    <p class="uno">con algo que no llegaba,</p>
+    <p class="uno">todo lo que ya se fue.</p>
+    <p class="uno"></p><strong>Un mismo elemento captado de tres formas distintas:</strong></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        const forma1 = document.getElementsByClassName("uno").item(1).innerHTML;
+        document.getElementById("demo1").innerHTML = forma1;
+
+        const forma2 = document.getElementsByTagName("p").item(5).innerHTML;
+        document.getElementById("demo2").innerHTML = forma2;
+
+        const forma3list = document.getElementsByTagName("p");
+
+        for (let i = 0; i < forma3list.length; i++) {
+			if(forma3list.item(i).innerHTML === "soñando... no sé con qué,") {
+                document.getElementById("demo3").innerHTML = forma3list.item(i).innerHTML;
+            }
+    	}
+    </script>
+
+</body>
+</html>

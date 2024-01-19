@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+
+        .oculto {
+            display: none;
+        }
+    </style>
+    <title>DOM - Tarea6 - UT3</title>
+</head>
+<body>
+    <center id="interior">
+        <h1 id="a">Creando código HTML desde Javascript de forma dinámica</h1>
+        <p>Recoger en una tabla HTML nombres y notas </p>
+        <button type="button" onclick="addAlumno()">Añadir nuevo alumno</button>
+        <button type="button" onclick="removeAlumno()">Borrar alumno</button>
+        <p></p>
+        <table id="alumnos" class="oculto">
+            <thead>
+                <tr>
+                    <th>Número</th>
+                    <th>Nombre</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se agregarán las filas de alumnos -->
+            </tbody>
+        </table>
+    </center>
+    <center>
+        <button type="button" onclick="boom()">No tocar</button>
+    </center>
+    <script src="main.js"></script>
+</body>
+</html>
